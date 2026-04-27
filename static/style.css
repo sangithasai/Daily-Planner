@@ -1,0 +1,219 @@
+/* ------------------------------
+   GLOBAL BODY STYLING
+------------------------------ */
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff, #f8fafc);
+    font-family: 'Segoe UI', sans-serif;
+    animation: fadeInBody 0.8s ease-in-out;
+    
+}
+
+/* Main wrapper */
+.main-container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* ------------------------------
+   NAVBAR
+------------------------------ */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* ------------------------------
+   MAIN PLANNER / LOGIN / REGISTER BOX
+------------------------------ */
+.planner-box,
+.card {
+    max-width: 850px;
+    width: 100%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    animation: zoomIn 0.7s ease;
+}
+
+/* ------------------------------
+   HEADINGS
+------------------------------ */
+h1, h2 {
+    color: #1e293b;
+    font-weight: bold;
+}
+
+/* ------------------------------
+   FORMS
+------------------------------ */
+.form-control,
+.form-select {
+    border-radius: 10px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 10px rgba(13, 110, 253, 0.25);
+    border-color: #0d6efd;
+}
+
+/* ------------------------------
+   BUTTONS
+------------------------------ */
+.btn {
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+}
+
+/* ------------------------------
+   TASK CARDS
+------------------------------ */
+.task-card {
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.task-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* ------------------------------
+   ALERTS / FLASH MESSAGES
+------------------------------ */
+.alert {
+    border-radius: 12px;
+    animation: slideDown 0.5s ease;
+}
+
+/* ------------------------------
+   ANIMATIONS
+------------------------------ */
+
+/* Page Fade-In */
+@keyframes fadeInBody {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Planner Box Zoom */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Alert Slide */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------------------------------
+   TEXT HELPERS
+------------------------------ */
+.text-muted {
+    font-size: 0.95rem;
+}
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+------------------------------ */
+@media (max-width: 992px) {
+
+    .planner-box,
+    .card {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    body {
+        align-items: flex-start;
+        padding-top: 90px;
+    }
+
+    .planner-box,
+    .card {
+        padding: 20px;
+    }
+
+    .task-card .d-flex {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .task-card .btn {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    body {
+        padding-top: 80px;
+    }
+
+    .planner-box,
+    .card {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+
+    .form-control,
+    .form-select {
+        padding: 10px;
+    }
+}
