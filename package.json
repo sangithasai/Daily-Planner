@@ -2,10 +2,10 @@
   "name": "daily_planner",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "electron ."
-  },
+ "main": "main.js",
+"scripts": {
+  "start": "electron ."
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sangithasai/Daily-Planner.git"
